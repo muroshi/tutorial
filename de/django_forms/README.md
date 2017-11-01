@@ -35,11 +35,11 @@ Wie du wahrscheinlich schon vermutet hast, `PostForm` ist der Name unseres Formu
 
 Als Nächstes sehen wir uns `class Meta` an, damit sagen wir Django, welches Model benutzt werden soll, um das Formular zu erstellen (`model = Post`).
 
-Nun können wir bestimmen, welche(s) Feld(er) unser Formular besitzen soll. Wir wollen hier nur den `title` und `text` sichtbar machen - der `author` sollte die Person sein, die gerade eingeloggt ist (Du!) und `created_date` sollte automatisch generiert werden, wenn der Post erstellt wird (also im Code). Stimmt's?
+Nun können wir bestimmen, welche(s) Feld(er) unser Formular besitzen soll. Wir wollen hier nur den `title` und `text` sichtbar machen - der `author` soll die Person sein, die gerade eingeloggt ist (Du!) und `created_date` soll automatisch generiert werden, wenn der Post erstellt wird (also im Code). Stimmt's?
 
-Und das war's schon! Jetzt müssen wir das Formular nur noch in einem *view* benutzen und im Template darstellen.
+Das war's schon! Jetzt müssen wir das Formular nur noch in einem *view* benutzen und im Template darstellen.
 
-Also erstellen wir hier auch wieder einen Link auf die Seite, eine URL, einen View und ein Template.
+Also erstellen wir wieder einen Link auf die Seite, eine URL, einen View und ein Template.
 
 ## Link auf eine Seite mit dem Formular
 
