@@ -238,7 +238,7 @@ Das ist genial!
 
 ## Formularvalidierung
 
-Jetzt zeigen wir dir, wie cool Django Formulare sind. Ein Blogpost muss `title`- und `text`-Felder besitzen. In unserem `Post`-Model haben wir (im Gegensatz zu dem `published_date`) nicht festgelegt, dass diese Felder nicht benötigt werden, also nimmt Django standardmäßig an, dass sie definiert werden.
+Jetzt zeigen wir dir, wie cool Django Formulare sind. Ein Blogpost muss `title`- und `text`-Felder besitzen. In unserem `Post`-Model haben wir (im Gegensatz zum nicht enthaltenen `published_date`) festgelegt, dass diese Felder benötigt werden, also nimmt Django standardmäßig an, dass sie ausgefüllt werden müssen.
 
 Versuch das Formular ohne `title` und `text` zu speichern. Rate, was passieren wird!
 
