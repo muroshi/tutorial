@@ -51,7 +51,7 @@ Jetzt ist es an der Zeit, `blog/templates/blog/base.html` zu öffnen. Wir fügen
 
 Merk dir, dass wir unseren neuen View `post_new` nennen wollen.
 
-Nach Hinzufügen der Zeile sieht deine HTML-Datei so aus:
+Nach Hinzufügen der Zeile   deine HTML-Datei so aus:
 
 ```html
 {% load staticfiles %}
@@ -305,7 +305,7 @@ def post_edit(request, pk):
     return render(request, 'blog/post_edit.html', {'form': form})
 ```
 
-Sieht genauso aus wie unsere `post_new` view, oder? Aber nicht ganz. Der Unterschied: Wir übergeben einen zusätzlichen `pk` Parameter von den Urls. Und: Wir bekommen das `Post`-Model, welches wir bearbeiten wollen, mit `get_object_or_404(Post, pk=pk)` und wenn wir dann ein Formular erstellen, übergeben wir post als `instance`, wenn wir das Formular speichern:
+Sieht fast genauso aus wie unsere `post_new` view, oder? Aber nicht ganz. Der Unterschied: Wir übergeben einen zusätzlichen `pk` Parameter von den Urls. Und: Wir bekommen das `Post`-Model, welches wir bearbeiten wollen, mit `get_object_or_404(Post, pk=pk)` und wenn wir dann ein Formular erstellen, übergeben wir post als `instance`, wenn wir das Formular speichern:
 
 ```python
 form = PostForm(request.POST, instance=post)
