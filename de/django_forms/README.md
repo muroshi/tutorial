@@ -168,7 +168,7 @@ def post_new(request):
     return render(request, 'blog/post_edit.html', {'form': form})
 ```
 
-Wenn wir das Formular übermitteln, werden wir zur selben Ansicht weitergeleitet, aber dieses Mal haben wir mehr Daten in `request`, genauer in `request.POST` (der Name hat nichts zu tun mit einem "Blogpost", sondern damit dass wir Daten "posten"). Erinnerst du dich daran, dass in der HTML-Datei unsere `<form>` Definition die Variable `method="POST"` hatte? Alle Felder aus dem Formular sind jetzt in `request.POST`. Du solltest `POST` nicht umbenennen (der einzige andere gültige Wert für `method` ist `GET`, wir wollen hier jetzt aber nicht auf den Unterschied eingehen).
+Wenn wir das Formular übermitteln, werden wir zur selben Ansicht weitergeleitet, aber dieses Mal haben wir mehr Daten in `request`, genauer in `request.POST` (der Name hat nichts mit einem "Blogpost" zu tun, sondern damit, dass wir Daten "posten"). Erinnerst du dich, dass wir in der HTML-Datei unserer `<form>` Definition den Parameter `method="POST"` hatten? Alle Felder aus dem Formular sind jetzt in `request.POST`. Du solltest `POST` nicht umbenennen (der einzige andere gültige Wert für `method` wäre `GET`, wir wollen hier aber nicht auf den Unterschied eingehen).
 
 Wir haben also in unserem *view* zwei separate Situationen zu bearbeiten. Erstens: Wenn wir zum ersten Mal auf die Seite zugreifen und wir ein leeres Formular haben wollen. Zweitens: Wenn wir zurück zu der *view* gehen, mit all den Formulardaten, die wir gerade eingegeben haben. Wir müssen also eine Bedingung hinzufügen (dafür verwenden wir `if`).
 
