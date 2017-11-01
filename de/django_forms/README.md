@@ -130,7 +130,7 @@ Wir müssen eine Datei `post_edit.html` im Verzeichnis `blog/templates/blog` ers
 *   Wir müssen das Formular anzeigen. Wir können das, zum Beispiel, mit einem simplen `{% raw %}{{ form.as_p }}{% endraw %}` tun.
 *   Die Zeile oben muss von einem HTML-Formular-Tag eingeschlossen werden `<form method="POST">...</form>`.
 *   Wir benötigen einen `Save`-Button. Wir erstellen diesen mit einem HTML-Button: `<button type="submit">Save</button>`.
-*   Und schließlich fügen wir nach dem öffnenden `<form ...>` Tag `{% raw %}{% csrf_token %}{% endraw %}` hinzu. Das ist sehr wichtig, da es deine Formulare sicher macht! Django wird sich beschweren, wenn du dies vergisst und trotzdem versuchst, das Formular zu speichern:
+*   Und schließlich fügen wir nach dem öffnenden `<form ...>` Tag ein`{% raw %}{% csrf_token %}{% endraw %}` hinzu. Das ist sehr wichtig, da es deine Formulare sicher macht! Django wird sich beschweren, wenn du es vergisst und trotzdem versuchst, das Formular zu speichern:
 
 ![CSFR Forbidden page](images/csrf2.png)
 
